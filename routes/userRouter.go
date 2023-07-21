@@ -1,8 +1,9 @@
 package routes
 
-import(
+import (
+	controller "golang-KitchenKontrol/controllers"
+
 	"github.com/gin-gonic/gin"
-	"golang-KitchenKontrol/controllers"
 )
 
 func UserRoutes(incomingRoutes *gin.Engine) {
@@ -10,5 +11,4 @@ func UserRoutes(incomingRoutes *gin.Engine) {
 	incomingRoutes.GET("/users/:user_id", controller.GetUser())
 	incomingRoutes.POST("/users/signup", controller.SignupUser())
 	incomingRoutes.POST("/users/login", controller.LoginUser())
-	incomingRoutes.DELETE("/users/:user_id", controller.DeleteUser())
 }

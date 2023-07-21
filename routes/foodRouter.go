@@ -1,7 +1,8 @@
 package routes
 
-import(
-	"golang-KitchenKontrol/controllers"
+import (
+	controller "golang-KitchenKontrol/controllers"
+
 	"github.com/gin-gonic/gin"
 )
 
