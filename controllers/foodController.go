@@ -98,8 +98,6 @@ func CreateFood() gin.HandlerFunc {
 		var food models.Food
 		var menu models.Menu
 
-		c.BindJSON(&food)
-
 		if err := c.BindJSON(&food); err != nil {
 			c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 			return

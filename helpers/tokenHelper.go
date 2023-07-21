@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"golang-KitchenKontrol/database"
 	"log"
-	"os"
 	"time"
 
 	jwt "github.com/golang-jwt/jwt/v5"
@@ -25,7 +24,7 @@ type SignedDetails struct {
 
 var userCollection *mongo.Collection = database.OpenCollection(database.Client, "user")
 
-var SECRET_KEY string = os.Getenv("SECRET_KEY")
+var SECRET_KEY string = "jasdiuiqwd7h182en9ud1un2o1112naDNIN9J9K0dj1iwudn1"
 
 func GenerateAllTokens(email string, firstName string, lastName string, uid string) (singedToken string, singedRefreshToken string, err error) {
 	claims := &SignedDetails{
